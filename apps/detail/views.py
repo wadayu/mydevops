@@ -5,7 +5,7 @@ from users.utils.verify import *
 from operations.models import *
 from scanhosts.lib.utils import prpcrypt
 from .utils.machines import *
-from .models import *
+from detail.models import *
 from .utils.handdles import *
 
 

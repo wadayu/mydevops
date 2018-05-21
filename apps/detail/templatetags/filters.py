@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 from django.template import Library
-from detail.utils.machines import Machines
+from detail.utils.machines import *
 from detail.models import *
 register = Library()
 

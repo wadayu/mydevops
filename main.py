@@ -24,14 +24,15 @@ from scanhosts.util.nmap_all_server import NmapVMX
 from scanhosts.util.nmap_all_server import snmp_begin
 from scanhosts.util.j_filter import FilterRules
 from scanhosts.util.get_pv_relation import GetHostType
-from apps.detail.models import  PhysicalServerInfo,ConnectionInfo,OtherMachineInfo,StatisticsRecord
-from apps.operations.models import  MachineOperationsInfo
+# from detail.models import  PhysicalServerInfo,ConnectionInfo,OtherMachineInfo,StatisticsRecord
+from detail.models import  *
+from operations.models import  MachineOperationsInfo
 
 from scanhosts.util.nmap_all_server import NetDevLogin
 from admin.settings.local_cj import BASE_DIR
 import logging
 logger = logging.getLogger("django")
-from apps.detail.utils.machines import Machines
+from detail.utils.machines import *
 
 
 
@@ -72,9 +73,9 @@ def main():
     # '''
     # 扫描主机信息
     # '''
-    # for nmap_type in s_nets:
-    #     unkown_list,key_not_login_list = snmp_begin(nmap_type,s_ports,s_pass,s_keys,s_cmds,s_blacks,s_emails)
-    #
+    for nmap_type in s_nets:
+        unkown_list,key_not_login_list = snmp_begin(nmap_type,s_ports,s_pass,s_keys,s_cmds,s_blacks,s_emails)
+
     # '''
     # 扫描网络信息
     # '''

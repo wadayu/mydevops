@@ -6,6 +6,7 @@
         <option name="rootFolder" value="$MODULE_DIR$" />
         <option name="settingsModule" value="settings.py" />
         <option name="manageScript" value="manage.py" />
+        <option name="environment" value="&lt;map/&gt;" />
       </configuration>
     </facet>
   </component>
@@ -14,7 +15,7 @@
       <sourceFolder url="file://$MODULE_DIR$/apps" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/extra_apps" isTestSource="false" />
     </content>
-    <orderEntry type="jdk" jdkName="Python 2.7.13 (/opt/python2.7.13/bin/python2.7)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="Python 2.7.14 virtualenv at C:\Users\jsb-yw02\Envs\imoocc" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="opsi" />
     <orderEntry type="module" module-name="test" />
@@ -33,4 +34,3 @@
     <option name="PROJECT_TEST_RUNNER" value="Nosetests" />
   </component>
 </module>
-

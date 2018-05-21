@@ -40,17 +40,18 @@ INSTALLED_APPS = (
     'django_crontab',
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'detail',
     'users',
     'operations',
     'scanhosts',
     'taskdo',
     # 'extra_apps.xadmin',
     'crispy_forms',
+    'detail',
 )
 SITE_ID = 1
 
@@ -93,9 +94,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'imoocc',
-        'USER': 'imoocc',
-        'PASSWORD': 'imoocccom',
-        'HOST': '127.0.0.1',
+        'USER': 'root',
+        'PASSWORD': '666666',
+        'HOST': '192.168.19.131',
         'PORT': '',
         'OPTIONS': {},
         'init_command': 'SET storage_engine=INNODB,'
@@ -125,8 +126,8 @@ STATICFILES_DIRS = [
 
 # Email settings smtp/pop3
 EMAIL_HOST = "smtp.163.com"
-EMAIL_HOST_USER = "xxx@email.com"
-EMAIL_HOST_PASSWORD = "123456"
+EMAIL_HOST_USER = "wadayu@163.com"
+EMAIL_HOST_PASSWORD = "WDY*1990"
 EMAIL_USE_TLS = False
 EMAIL_SUBJECT_PREFIX = u"[邮件]"
 
@@ -159,9 +160,9 @@ LOGGING = {
 }
 
 # Mongo DB
-MONGO_HOST = '192.168.1.108'
+MONGO_HOST = '192.168.19.131'
 MONGO_PORT = '27017'
 
 # Redis Con
-REDSI_KWARGS_LPUSH = {"host":'192.168.1.108','port':6379,'db':3}
+REDSI_KWARGS_LPUSH = {"host":'192.168.19.131','port':6379,'db':3}
 REDSI_LPUSH_POOL = None
