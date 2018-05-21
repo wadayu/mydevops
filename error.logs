@@ -1,0 +1,2751 @@
+[E 20180316 16:33:03 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 26, in <module>
+    url(r'^ansible/', include('taskdo.urls', namespace='taskdo')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/taskdo/urls.py", line 3, in <module>
+    from taskdo.views import *
+  File "/data/imoocc/taskdo/views.py", line 19, in <module>
+    from taskdo.utils.base.MgCon import *
+  File "/data/imoocc/taskdo/utils/base/MgCon.py", line 4, in <module>
+    from admin.settings.settings import MONGO_HOST,MONGO_PORT,BASE_DIR
+ImportError: cannot import name MONGO_HOST
+[E 20180316 16:33:04 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 26, in <module>
+    url(r'^ansible/', include('taskdo.urls', namespace='taskdo')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/taskdo/urls.py", line 3, in <module>
+    from taskdo.views import *
+  File "/data/imoocc/taskdo/views.py", line 19, in <module>
+    from taskdo.utils.base.MgCon import *
+  File "/data/imoocc/taskdo/utils/base/MgCon.py", line 4, in <module>
+    from admin.settings.settings import MONGO_HOST,MONGO_PORT,BASE_DIR
+ImportError: cannot import name MONGO_HOST
+[W 20180316 16:35:41 base:170] Not Found: /favicon.ico
+[W 20180316 16:38:09 base:170] Not Found: /xadmin
+[W 20180320 14:06:04 base:170] Not Found: /favicon.ico
+[W 20180320 14:06:10 base:170] Not Found: /xadmin
+[W 20180320 14:06:20 base:170] Not Found: /xadmin/
+[I 20180321 11:37:31 nmap_all_server:151] Scan ip 192.168.19.1 ..... Port 22
+[E 20180321 11:37:31 nmap_all_server:181] Telnet port Exception:192.168.19.1,22,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:37:31 nmap_all_server:151] Scan ip 192.168.19.1 ..... Port 222
+[E 20180321 11:37:31 nmap_all_server:181] Telnet port Exception:192.168.19.1,222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:37:31 nmap_all_server:151] Scan ip 192.168.19.1 ..... Port 2222
+[E 20180321 11:37:31 nmap_all_server:181] Telnet port Exception:192.168.19.1,2222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:37:31 nmap_all_server:151] Scan ip 192.168.19.1 ..... Port 22222
+[E 20180321 11:37:31 nmap_all_server:181] Telnet port Exception:192.168.19.1,22222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:37:31 nmap_all_server:151] Scan ip 192.168.19.1 ..... Port 2222
+[E 20180321 11:37:31 nmap_all_server:181] Telnet port Exception:192.168.19.1,2222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:37:31 nmap_all_server:151] Scan ip 192.168.19.131 ..... Port 22
+[I 20180321 11:37:31 nmap_all_server:160] IP:192.168.19.131 Port:22 Server:ssh-2.0-openssh_5.3
+
+[I 20180321 11:37:31 nmap_all_server:151] Scan ip 192.168.19.131 ..... Port 222
+[E 20180321 11:37:31 nmap_all_server:181] Telnet port Exception:192.168.19.131,222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:37:31 nmap_all_server:151] Scan ip 192.168.19.131 ..... Port 2222
+[E 20180321 11:37:31 nmap_all_server:181] Telnet port Exception:192.168.19.131,2222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:37:31 nmap_all_server:151] Scan ip 192.168.19.131 ..... Port 22222
+[E 20180321 11:37:31 nmap_all_server:181] Telnet port Exception:192.168.19.131,22222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:37:31 nmap_all_server:151] Scan ip 192.168.19.131 ..... Port 2222
+[E 20180321 11:37:31 nmap_all_server:181] Telnet port Exception:192.168.19.131,2222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:37:31 nmap_all_server:151] Scan ip 192.168.19.2 ..... Port 22
+[E 20180321 11:37:31 nmap_all_server:181] Telnet port Exception:192.168.19.2,22,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:37:31 nmap_all_server:151] Scan ip 192.168.19.2 ..... Port 222
+[E 20180321 11:37:31 nmap_all_server:181] Telnet port Exception:192.168.19.2,222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:37:31 nmap_all_server:151] Scan ip 192.168.19.2 ..... Port 2222
+[E 20180321 11:37:31 nmap_all_server:181] Telnet port Exception:192.168.19.2,2222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:37:31 nmap_all_server:151] Scan ip 192.168.19.2 ..... Port 22222
+[E 20180321 11:37:31 nmap_all_server:181] Telnet port Exception:192.168.19.2,22222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:37:31 nmap_all_server:151] Scan ip 192.168.19.2 ..... Port 2222
+[E 20180321 11:37:31 nmap_all_server:181] Telnet port Exception:192.168.19.2,2222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:37:31 nmap_all_server:151] Scan ip 192.168.19.254 ..... Port 22
+[E 20180321 11:37:34 nmap_all_server:181] Telnet port Exception:192.168.19.254,22,[Errno 110] Connection timed out
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 110] Connection timed out
+[I 20180321 11:37:34 nmap_all_server:151] Scan ip 192.168.19.254 ..... Port 222
+[E 20180321 11:37:37 nmap_all_server:181] Telnet port Exception:192.168.19.254,222,[Errno 110] Connection timed out
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 110] Connection timed out
+[I 20180321 11:37:37 nmap_all_server:151] Scan ip 192.168.19.254 ..... Port 2222
+[E 20180321 11:37:40 nmap_all_server:181] Telnet port Exception:192.168.19.254,2222,[Errno 110] Connection timed out
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 110] Connection timed out
+[I 20180321 11:37:40 nmap_all_server:151] Scan ip 192.168.19.254 ..... Port 22222
+[E 20180321 11:37:43 nmap_all_server:181] Telnet port Exception:192.168.19.254,22222,[Errno 110] Connection timed out
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 110] Connection timed out
+[I 20180321 11:37:43 nmap_all_server:151] Scan ip 192.168.19.254 ..... Port 2222
+[E 20180321 11:37:46 nmap_all_server:181] Telnet port Exception:192.168.19.254,2222,[Errno 110] Connection timed out
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 110] Connection timed out
+[I 20180321 11:37:49 nmap_all_server:215] ssh login and exec command:{'info': ('192.168.19.131', 22, 'root', '666666'), 'status': 'success', 'cat /etc/issue': 'CentOS release 6.7 (Final)\nKernel \\r on an \\m\n\n', 'dmidecode -s system-serial-number': 'VMware-56 4d 67 67 9a 8c f0 b7-5e 9a 9f bd a2 27 d1 b6\n', 'hostname': 'www.a.com\n', "cat /sys/class/net/[^vtlsb]*/address||esxcfg-vmknic -l|awk '{print $8}'|grep ':'": '00:0c:29:27:d1:b6\n00:0c:29:27:d1:c0\n', 'cat /etc/redhat-release': 'CentOS release 6.7 (Final)\n', 'dmidecode -s system-manufacturer': 'VMware, Inc.\n', 'dmidecode -s system-product-name': 'VMware Virtual Platform\n'}
+[I 20180321 11:37:49 nmap_all_server:58] Use password login:{'192.168.19.131': ('22', '666666', 'root', 'CentOS 6.7', 'www.a.com\n', '000c2927d1b6_000c2927d1c0_', 'VMware-564d67679a8cf0b7-5e9a9fbda227d1b6\n', 'VMware, Inc.VMware Virtual Platform')},{}
+[I 20180321 11:37:49 nmap_all_server:60] Use key login:{},{}
+[I 20180321 11:37:50 j_filter:84] Inset data into table ConnectionInfo sucess!
+[I 20180321 11:55:51 nmap_all_server:151] Scan ip 192.168.19.1 ..... Port 22
+[E 20180321 11:55:51 nmap_all_server:181] Telnet port Exception:192.168.19.1,22,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:55:51 nmap_all_server:151] Scan ip 192.168.19.1 ..... Port 222
+[E 20180321 11:55:51 nmap_all_server:181] Telnet port Exception:192.168.19.1,222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:55:51 nmap_all_server:151] Scan ip 192.168.19.1 ..... Port 2222
+[E 20180321 11:55:51 nmap_all_server:181] Telnet port Exception:192.168.19.1,2222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:55:51 nmap_all_server:151] Scan ip 192.168.19.1 ..... Port 22222
+[E 20180321 11:55:51 nmap_all_server:181] Telnet port Exception:192.168.19.1,22222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:55:51 nmap_all_server:151] Scan ip 192.168.19.1 ..... Port 2222
+[E 20180321 11:55:51 nmap_all_server:181] Telnet port Exception:192.168.19.1,2222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:55:51 nmap_all_server:151] Scan ip 192.168.19.130 ..... Port 22
+[I 20180321 11:55:51 nmap_all_server:160] IP:192.168.19.130 Port:22 Server:ssh-2.0-openssh_5.3
+
+[I 20180321 11:55:51 nmap_all_server:151] Scan ip 192.168.19.130 ..... Port 222
+[E 20180321 11:55:51 nmap_all_server:181] Telnet port Exception:192.168.19.130,222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:55:51 nmap_all_server:151] Scan ip 192.168.19.130 ..... Port 2222
+[E 20180321 11:55:51 nmap_all_server:181] Telnet port Exception:192.168.19.130,2222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:55:51 nmap_all_server:151] Scan ip 192.168.19.130 ..... Port 22222
+[E 20180321 11:55:51 nmap_all_server:181] Telnet port Exception:192.168.19.130,22222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:55:51 nmap_all_server:151] Scan ip 192.168.19.130 ..... Port 2222
+[E 20180321 11:55:51 nmap_all_server:181] Telnet port Exception:192.168.19.130,2222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:55:51 nmap_all_server:151] Scan ip 192.168.19.131 ..... Port 22
+[I 20180321 11:55:51 nmap_all_server:160] IP:192.168.19.131 Port:22 Server:ssh-2.0-openssh_5.3
+
+[I 20180321 11:55:51 nmap_all_server:151] Scan ip 192.168.19.131 ..... Port 222
+[E 20180321 11:55:51 nmap_all_server:181] Telnet port Exception:192.168.19.131,222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:55:51 nmap_all_server:151] Scan ip 192.168.19.131 ..... Port 2222
+[E 20180321 11:55:51 nmap_all_server:181] Telnet port Exception:192.168.19.131,2222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:55:51 nmap_all_server:151] Scan ip 192.168.19.131 ..... Port 22222
+[E 20180321 11:55:51 nmap_all_server:181] Telnet port Exception:192.168.19.131,22222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:55:51 nmap_all_server:151] Scan ip 192.168.19.131 ..... Port 2222
+[E 20180321 11:55:51 nmap_all_server:181] Telnet port Exception:192.168.19.131,2222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:55:51 nmap_all_server:151] Scan ip 192.168.19.2 ..... Port 22
+[E 20180321 11:55:51 nmap_all_server:181] Telnet port Exception:192.168.19.2,22,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:55:51 nmap_all_server:151] Scan ip 192.168.19.2 ..... Port 222
+[E 20180321 11:55:51 nmap_all_server:181] Telnet port Exception:192.168.19.2,222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:55:51 nmap_all_server:151] Scan ip 192.168.19.2 ..... Port 2222
+[E 20180321 11:55:51 nmap_all_server:181] Telnet port Exception:192.168.19.2,2222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:55:51 nmap_all_server:151] Scan ip 192.168.19.2 ..... Port 22222
+[E 20180321 11:55:51 nmap_all_server:181] Telnet port Exception:192.168.19.2,22222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:55:51 nmap_all_server:151] Scan ip 192.168.19.2 ..... Port 2222
+[E 20180321 11:55:51 nmap_all_server:181] Telnet port Exception:192.168.19.2,2222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180321 11:55:51 nmap_all_server:151] Scan ip 192.168.19.254 ..... Port 22
+[E 20180321 11:55:54 nmap_all_server:181] Telnet port Exception:192.168.19.254,22,[Errno 110] Connection timed out
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 110] Connection timed out
+[I 20180321 11:55:54 nmap_all_server:151] Scan ip 192.168.19.254 ..... Port 222
+[E 20180321 11:55:57 nmap_all_server:181] Telnet port Exception:192.168.19.254,222,[Errno 110] Connection timed out
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 110] Connection timed out
+[I 20180321 11:55:57 nmap_all_server:151] Scan ip 192.168.19.254 ..... Port 2222
+[E 20180321 11:56:00 nmap_all_server:181] Telnet port Exception:192.168.19.254,2222,[Errno 110] Connection timed out
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 110] Connection timed out
+[I 20180321 11:56:00 nmap_all_server:151] Scan ip 192.168.19.254 ..... Port 22222
+[E 20180321 11:56:03 nmap_all_server:181] Telnet port Exception:192.168.19.254,22222,[Errno 110] Connection timed out
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 110] Connection timed out
+[I 20180321 11:56:03 nmap_all_server:151] Scan ip 192.168.19.254 ..... Port 2222
+[E 20180321 11:56:06 nmap_all_server:181] Telnet port Exception:192.168.19.254,2222,[Errno 110] Connection timed out
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 152, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 110] Connection timed out
+[I 20180321 11:56:08 nmap_all_server:215] ssh login and exec command:{'info': ('192.168.19.131', 22, 'root', '666666'), 'status': 'success', 'cat /etc/issue': 'CentOS release 6.7 (Final)\nKernel \\r on an \\m\n\n', 'dmidecode -s system-serial-number': 'VMware-56 4d 67 67 9a 8c f0 b7-5e 9a 9f bd a2 27 d1 b6\n', 'hostname': 'www.a.com\n', "cat /sys/class/net/[^vtlsb]*/address||esxcfg-vmknic -l|awk '{print $8}'|grep ':'": '00:0c:29:27:d1:b6\n00:0c:29:27:d1:c0\n', 'cat /etc/redhat-release': 'CentOS release 6.7 (Final)\n', 'dmidecode -s system-manufacturer': 'VMware, Inc.\n', 'dmidecode -s system-product-name': 'VMware Virtual Platform\n'}
+[I 20180321 11:56:09 nmap_all_server:215] ssh login and exec command:{'info': ('192.168.19.130', 22, 'root', '666666'), 'status': 'success', 'cat /etc/issue': 'CentOS release 6.7 (Final)\nKernel \\r on an \\m\n\n', 'dmidecode -s system-serial-number': 'VMware-56 4d 09 44 a7 50 fa e8-bf 66 e5 a9 0c 2a d5 86\n', 'hostname': 'zabbix_agent\n', "cat /sys/class/net/[^vtlsb]*/address||esxcfg-vmknic -l|awk '{print $8}'|grep ':'": 'ee:31:c9:8c:39:7d\n00:0c:29:2a:d5:86\n', 'cat /etc/redhat-release': 'CentOS release 6.7 (Final)\n', 'dmidecode -s system-manufacturer': 'VMware, Inc.\n', 'dmidecode -s system-product-name': 'VMware Virtual Platform\n'}
+[I 20180321 11:56:09 nmap_all_server:58] Use password login:{'192.168.19.131': ('22', '666666', 'root', 'CentOS 6.7', 'www.a.com\n', '000c2927d1b6_000c2927d1c0_', 'VMware-564d67679a8cf0b7-5e9a9fbda227d1b6\n', 'VMware, Inc.VMware Virtual Platform'), '192.168.19.130': ('22', '666666', 'root', 'CentOS 6.7', 'zabbix_agent\n', 'ee31c98c397d_000c292ad586_', 'VMware-564d0944a750fae8-bf66e5a90c2ad586\n', 'VMware, Inc.VMware Virtual Platform')},{}
+[I 20180321 11:56:09 nmap_all_server:60] Use key login:{},{}
+[I 20180321 11:56:10 j_filter:84] Inset data into table ConnectionInfo sucess!
+[E 20180321 13:05:06 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 7, in <module>
+    from .utils.machines import *
+  File "/data/imoocc/apps/detail/utils/machines.py", line 3, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:05:07 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 7, in <module>
+    from .utils.machines import *
+  File "/data/imoocc/apps/detail/utils/machines.py", line 3, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:05:12 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 7, in <module>
+    from .utils.machines import *
+  File "/data/imoocc/apps/detail/utils/machines.py", line 3, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:05:12 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 7, in <module>
+    from .utils.machines import *
+  File "/data/imoocc/apps/detail/utils/machines.py", line 3, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:10:48 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 7, in <module>
+    from .utils.machines import *
+  File "/data/imoocc/apps/detail/utils/machines.py", line 3, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:10:48 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 7, in <module>
+    from .utils.machines import *
+  File "/data/imoocc/apps/detail/utils/machines.py", line 3, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:10:51 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 7, in <module>
+    from .utils.machines import *
+  File "/data/imoocc/apps/detail/utils/machines.py", line 3, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:10:51 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 7, in <module>
+    from .utils.machines import *
+  File "/data/imoocc/apps/detail/utils/machines.py", line 3, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:10:52 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 7, in <module>
+    from .utils.machines import *
+  File "/data/imoocc/apps/detail/utils/machines.py", line 3, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:10:52 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 7, in <module>
+    from .utils.machines import *
+  File "/data/imoocc/apps/detail/utils/machines.py", line 3, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:12:17 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 7, in <module>
+    from .utils.machines import *
+  File "/data/imoocc/apps/detail/utils/machines.py", line 3, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:12:17 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 7, in <module>
+    from .utils.machines import *
+  File "/data/imoocc/apps/detail/utils/machines.py", line 3, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:12:18 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 7, in <module>
+    from .utils.machines import *
+  File "/data/imoocc/apps/detail/utils/machines.py", line 3, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:12:18 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 7, in <module>
+    from .utils.machines import *
+  File "/data/imoocc/apps/detail/utils/machines.py", line 3, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:12:18 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 7, in <module>
+    from .utils.machines import *
+  File "/data/imoocc/apps/detail/utils/machines.py", line 3, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:12:19 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 7, in <module>
+    from .utils.machines import *
+  File "/data/imoocc/apps/detail/utils/machines.py", line 3, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:12:19 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 7, in <module>
+    from .utils.machines import *
+  File "/data/imoocc/apps/detail/utils/machines.py", line 3, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:12:19 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 7, in <module>
+    from .utils.machines import *
+  File "/data/imoocc/apps/detail/utils/machines.py", line 3, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:12:19 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 7, in <module>
+    from .utils.machines import *
+  File "/data/imoocc/apps/detail/utils/machines.py", line 3, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:12:19 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 7, in <module>
+    from .utils.machines import *
+  File "/data/imoocc/apps/detail/utils/machines.py", line 3, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:12:20 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 7, in <module>
+    from .utils.machines import *
+  File "/data/imoocc/apps/detail/utils/machines.py", line 3, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:12:20 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 7, in <module>
+    from .utils.machines import *
+  File "/data/imoocc/apps/detail/utils/machines.py", line 3, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:12:20 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 7, in <module>
+    from .utils.machines import *
+  File "/data/imoocc/apps/detail/utils/machines.py", line 3, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:21:10 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 5, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:21:10 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 5, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:24:09 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 5, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:24:10 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 5, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:25:20 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 5, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180321 13:25:21 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 5, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180402 09:38:46 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 5, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180402 09:38:47 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 5, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180402 10:11:38 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 5, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180402 10:11:38 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 5, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180402 10:11:40 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 5, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180402 10:11:40 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 5, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180402 10:11:40 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 5, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180402 10:11:40 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 5, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180402 10:11:41 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 5, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180402 10:11:41 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 5, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180402 10:11:41 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 5, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180402 10:11:42 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 5, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180402 10:11:42 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 5, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180402 10:11:42 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 5, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180402 10:11:42 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 5, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180402 10:11:43 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 5, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180402 10:13:34 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 6, in <module>
+    from apps.operations.models import *
+  File "/data/imoocc/apps/operations/models.py", line 5, in <module>
+    class MachineOperationsInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'machineoperationsinfo' models in application 'operations': <class 'operations.models.MachineOperationsInfo'> and <class 'apps.operations.models.MachineOperationsInfo'>.
+[E 20180402 10:13:35 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 6, in <module>
+    from apps.operations.models import *
+  File "/data/imoocc/apps/operations/models.py", line 5, in <module>
+    class MachineOperationsInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'machineoperationsinfo' models in application 'operations': <class 'operations.models.MachineOperationsInfo'> and <class 'apps.operations.models.MachineOperationsInfo'>.
+[E 20180402 10:13:36 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 6, in <module>
+    from apps.operations.models import *
+  File "/data/imoocc/apps/operations/models.py", line 5, in <module>
+    class MachineOperationsInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'machineoperationsinfo' models in application 'operations': <class 'operations.models.MachineOperationsInfo'> and <class 'apps.operations.models.MachineOperationsInfo'>.
+[E 20180402 10:13:36 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 6, in <module>
+    from apps.operations.models import *
+  File "/data/imoocc/apps/operations/models.py", line 5, in <module>
+    class MachineOperationsInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'machineoperationsinfo' models in application 'operations': <class 'operations.models.MachineOperationsInfo'> and <class 'apps.operations.models.MachineOperationsInfo'>.
+[E 20180402 10:13:37 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 6, in <module>
+    from apps.operations.models import *
+  File "/data/imoocc/apps/operations/models.py", line 5, in <module>
+    class MachineOperationsInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'machineoperationsinfo' models in application 'operations': <class 'operations.models.MachineOperationsInfo'> and <class 'apps.operations.models.MachineOperationsInfo'>.
+[E 20180402 10:13:37 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 6, in <module>
+    from apps.operations.models import *
+  File "/data/imoocc/apps/operations/models.py", line 5, in <module>
+    class MachineOperationsInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'machineoperationsinfo' models in application 'operations': <class 'operations.models.MachineOperationsInfo'> and <class 'apps.operations.models.MachineOperationsInfo'>.
+[E 20180402 10:13:37 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 6, in <module>
+    from apps.operations.models import *
+  File "/data/imoocc/apps/operations/models.py", line 5, in <module>
+    class MachineOperationsInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'machineoperationsinfo' models in application 'operations': <class 'operations.models.MachineOperationsInfo'> and <class 'apps.operations.models.MachineOperationsInfo'>.
+[E 20180402 10:13:38 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 6, in <module>
+    from apps.operations.models import *
+  File "/data/imoocc/apps/operations/models.py", line 5, in <module>
+    class MachineOperationsInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'machineoperationsinfo' models in application 'operations': <class 'operations.models.MachineOperationsInfo'> and <class 'apps.operations.models.MachineOperationsInfo'>.
+[E 20180402 10:16:39 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 6, in <module>
+    from apps.operations.models import *
+  File "/data/imoocc/apps/operations/models.py", line 5, in <module>
+    class MachineOperationsInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'machineoperationsinfo' models in application 'operations': <class 'operations.models.MachineOperationsInfo'> and <class 'apps.operations.models.MachineOperationsInfo'>.
+[E 20180402 10:16:39 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 2, in <module>
+    from detail.utils import search
+  File "/data/imoocc/apps/detail/utils/search.py", line 6, in <module>
+    from apps.operations.models import *
+  File "/data/imoocc/apps/operations/models.py", line 5, in <module>
+    class MachineOperationsInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'machineoperationsinfo' models in application 'operations': <class 'operations.models.MachineOperationsInfo'> and <class 'apps.operations.models.MachineOperationsInfo'>.
+[E 20180402 10:21:24 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 8, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180402 10:21:24 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 8, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180402 10:21:33 base:256] Internal Server Error: /
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 119, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 8, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[E 20180402 10:21:33 base:256] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/handlers/base.py", line 108, in get_response
+    response = middleware_method(request)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/middleware/common.py", line 74, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 646, in is_valid_path
+    resolve(path, urlconf)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 521, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 365, in resolve
+    for pattern in self.url_patterns:
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 401, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/core/urlresolvers.py", line 395, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/admin/urls.py", line 23, in <module>
+    url(r'^', include('detail.urls', namespace='detail')),
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/conf/urls/__init__.py", line 33, in include
+    urlconf_module = import_module(urlconf_module)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/data/imoocc/apps/detail/urls.py", line 5, in <module>
+    from . import views
+  File "/data/imoocc/apps/detail/views.py", line 8, in <module>
+    from apps.detail.models import *
+  File "/data/imoocc/apps/detail/models.py", line 7, in <module>
+    class ConnectionInfo(models.Model):
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/db/models/base.py", line 309, in __new__
+    new_class._meta.apps.register_model(new_class._meta.app_label, new_class)
+  File "/root/.virtualenvs/imoocc/lib/python2.7/site-packages/django/apps/registry.py", line 221, in register_model
+    (model_name, app_label, app_models[model_name], model))
+RuntimeError: Conflicting 'connectioninfo' models in application 'detail': <class 'detail.models.ConnectionInfo'> and <class 'apps.detail.models.ConnectionInfo'>.
+[W 20180402 10:24:30 base:170] Not Found: /favicon.ico
+[I 20180402 10:31:37 nmap_all_server:152] Scan ip 192.168.19.1 ..... Port 22
+[E 20180402 10:31:37 nmap_all_server:182] Telnet port Exception:192.168.19.1,22,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 153, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180402 10:31:37 nmap_all_server:152] Scan ip 192.168.19.1 ..... Port 222
+[E 20180402 10:31:37 nmap_all_server:182] Telnet port Exception:192.168.19.1,222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 153, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180402 10:31:37 nmap_all_server:152] Scan ip 192.168.19.1 ..... Port 2222
+[E 20180402 10:31:37 nmap_all_server:182] Telnet port Exception:192.168.19.1,2222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 153, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180402 10:31:37 nmap_all_server:152] Scan ip 192.168.19.1 ..... Port 22222
+[E 20180402 10:31:37 nmap_all_server:182] Telnet port Exception:192.168.19.1,22222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 153, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180402 10:31:37 nmap_all_server:152] Scan ip 192.168.19.1 ..... Port 2222
+[E 20180402 10:31:37 nmap_all_server:182] Telnet port Exception:192.168.19.1,2222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 153, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180402 10:31:37 nmap_all_server:152] Scan ip 192.168.19.131 ..... Port 22
+[I 20180402 10:31:37 nmap_all_server:161] IP:192.168.19.131 Port:22 Server:ssh-2.0-openssh_5.3
+
+[I 20180402 10:31:37 nmap_all_server:152] Scan ip 192.168.19.131 ..... Port 222
+[E 20180402 10:31:37 nmap_all_server:182] Telnet port Exception:192.168.19.131,222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 153, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180402 10:31:37 nmap_all_server:152] Scan ip 192.168.19.131 ..... Port 2222
+[E 20180402 10:31:37 nmap_all_server:182] Telnet port Exception:192.168.19.131,2222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 153, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180402 10:31:37 nmap_all_server:152] Scan ip 192.168.19.131 ..... Port 22222
+[E 20180402 10:31:37 nmap_all_server:182] Telnet port Exception:192.168.19.131,22222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 153, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180402 10:31:37 nmap_all_server:152] Scan ip 192.168.19.131 ..... Port 2222
+[E 20180402 10:31:37 nmap_all_server:182] Telnet port Exception:192.168.19.131,2222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 153, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180402 10:31:37 nmap_all_server:152] Scan ip 192.168.19.2 ..... Port 22
+[E 20180402 10:31:37 nmap_all_server:182] Telnet port Exception:192.168.19.2,22,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 153, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180402 10:31:37 nmap_all_server:152] Scan ip 192.168.19.2 ..... Port 222
+[E 20180402 10:31:37 nmap_all_server:182] Telnet port Exception:192.168.19.2,222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 153, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180402 10:31:37 nmap_all_server:152] Scan ip 192.168.19.2 ..... Port 2222
+[E 20180402 10:31:37 nmap_all_server:182] Telnet port Exception:192.168.19.2,2222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 153, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180402 10:31:37 nmap_all_server:152] Scan ip 192.168.19.2 ..... Port 22222
+[E 20180402 10:31:37 nmap_all_server:182] Telnet port Exception:192.168.19.2,22222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 153, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180402 10:31:37 nmap_all_server:152] Scan ip 192.168.19.2 ..... Port 2222
+[E 20180402 10:31:37 nmap_all_server:182] Telnet port Exception:192.168.19.2,2222,[Errno 111] Connection refused
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 153, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 111] Connection refused
+[I 20180402 10:31:37 nmap_all_server:152] Scan ip 192.168.19.254 ..... Port 22
+[E 20180402 10:31:40 nmap_all_server:182] Telnet port Exception:192.168.19.254,22,[Errno 110] Connection timed out
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 153, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 110] Connection timed out
+[I 20180402 10:31:40 nmap_all_server:152] Scan ip 192.168.19.254 ..... Port 222
+[E 20180402 10:31:43 nmap_all_server:182] Telnet port Exception:192.168.19.254,222,[Errno 110] Connection timed out
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 153, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 110] Connection timed out
+[I 20180402 10:31:43 nmap_all_server:152] Scan ip 192.168.19.254 ..... Port 2222
+[E 20180402 10:31:46 nmap_all_server:182] Telnet port Exception:192.168.19.254,2222,[Errno 110] Connection timed out
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 153, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 110] Connection timed out
+[I 20180402 10:31:46 nmap_all_server:152] Scan ip 192.168.19.254 ..... Port 22222
+[E 20180402 10:31:49 nmap_all_server:182] Telnet port Exception:192.168.19.254,22222,[Errno 110] Connection timed out
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 153, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 110] Connection timed out
+[I 20180402 10:31:49 nmap_all_server:152] Scan ip 192.168.19.254 ..... Port 2222
+[E 20180402 10:31:52 nmap_all_server:182] Telnet port Exception:192.168.19.254,2222,[Errno 110] Connection timed out
+Traceback (most recent call last):
+  File "/data/imoocc/scanhosts/util/nmap_all_server.py", line 153, in nmap_sship
+    tm = telnetlib.Telnet(host=ip,port=port,timeout=4)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 211, in __init__
+    self.open(host, port, timeout)
+  File "/usr/local/lib/python2.7/telnetlib.py", line 227, in open
+    self.sock = socket.create_connection((host, port), timeout)
+  File "/usr/local/lib/python2.7/socket.py", line 575, in create_connection
+    raise err
+error: [Errno 110] Connection timed out
+[I 20180402 10:31:54 nmap_all_server:216] ssh login and exec command:{'info': ('192.168.19.131', 22, 'root', '666666'), 'status': 'success', 'cat /etc/issue': 'CentOS release 6.7 (Final)\nKernel \\r on an \\m\n\n', 'dmidecode -s system-serial-number': 'VMware-56 4d 67 67 9a 8c f0 b7-5e 9a 9f bd a2 27 d1 b6\n', 'hostname': 'www.a.com\n', "cat /sys/class/net/[^vtlsb]*/address||esxcfg-vmknic -l|awk '{print $8}'|grep ':'": '00:0c:29:27:d1:b6\n00:0c:29:27:d1:c0\n', 'cat /etc/redhat-release': 'CentOS release 6.7 (Final)\n', 'dmidecode -s system-manufacturer': 'VMware, Inc.\n', 'dmidecode -s system-product-name': 'VMware Virtual Platform\n'}
+[I 20180402 10:31:54 nmap_all_server:59] Use password login:{'192.168.19.131': ('22', '666666', 'root', 'CentOS 6.7', 'www.a.com\n', '000c2927d1b6_000c2927d1c0_', 'VMware-564d67679a8cf0b7-5e9a9fbda227d1b6\n', 'VMware, Inc.VMware Virtual Platform')},{}
+[I 20180402 10:31:54 nmap_all_server:61] Use key login:{},{}
+[I 20180402 10:31:56 j_filter:84] Inset data into table ConnectionInfo sucess!
+[W 20180417 10:25:56 base:170] Not Found: /favicon.ico
