@@ -1,0 +1,90 @@
+获取eth0的mac地址
+cat /sys/class/net/eth0/address 
+
+获取主机的机器厂商/型号/SN
+dmidecode -s system-manufacturer  #厂商
+dmidecode -s system-product-name  #型号
+dmidecode -s system-serial-number #SN号
+
+#探测存活主机
+nmap  -n -sP -PE 192.168.18.0/24
+#探测主机开启的端口服务
+nmap -n -PE 192.168.19.131
+
+-n 不对IP地址进行反解析(获取主机名)
+   
+pip install python-nmap
+
+import nmap
+nm = nmap.Portscanner()
+nm.scan(hosts='192.168.19.131',arguments='-n -sP') #获取当前主机的状态
+nm.scan(hosts='192.168.19.131',arguments='-n -PE') #获取当前主机的开放的端口
+
+nm.scan(hosts='192.168.19.0/24',arguments='-n -sP  -PE') #获取当前局域的所有主机信息（IP+MAC）
+nm.all_hosts() #获取存活的主机
+
+
+In [1]: import telnetlib
+In [2]: tm = telnetlib.Telnet(host='192.168.19.131',port='22',timeout=4)
+In [3]: tm.read_until('\n',timeout=5)
+Out[3]: 'SSH-2.0-OpenSSH_5.3\r\n
+
+Python中的ssh登录模块
+pexpect用来通过启动子程序，使用正则对程序输出做出特定响应，以此实现与其自动交互的Python模块
+paramiko基于Python实现的ssh远程安全连接，用于ssh远程执行命令、文件传输等功能的ssh客户端模块
+
+pip install pexpect
+import pexpect   
+pexpect.run(command='ls /tmp',)
+pexpect.run(command='ls /tmp',withexitstatus=0) #返回执行状态码
+
+ssh_k = pexpect.spawn('ssh 192.168.19.131')
+In [15]: ssh_k.expect('[p,P]assword') #对命令返回结果进行匹配
+Out[15]: 0
+In [21]: ssh_k.expect([pexpect.TIMEOUT,pexpect.EOF,'password'])
+Out[21]: 2
+
+ssh_k.interact()  #接管子程序，使用终端进行会话。
+
+注意：正则表达式$在expect代表的就是$符号，正则使用\r\n代表行结束
+
+pexpect向子程序发送指令：
+send()  发送命令+回车
+sendline()  只发送命令
+sendcontrol() 发送控制指令（Ctrl+c）
+
+pip install paramiko
+import paramiko
+In [2]: import paramiko
+In [3]: ssh = paramiko.SSHClient()
+In [4]: ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy)
+In [5]: ssh.connect('192.168.19.131','22','root','666666')
+In [11]: stdin,stdout,stderr = ssh.exec_command('ifconfig')
+In [12]: stdout.read()
+
+yaml配置文件的读取
+pip install PyYAML
+import yaml
+info = yaml.load(file('conf/scanhosts.yaml'))
+In [14]: type(info)
+Out[14]: dict
+In [17]: info.get('hostsinfo')
+
+
+pip install pysnmp
+In [12]: from pysnmp.entity.rfc3413.oneliner import cmdgen
+In [13]: cg = cmdgen.CommandGenerator()
+In [14]: errorIndication, errorStatus, errorIndex, varBinds = cg.getCmd( 
+    ...:     cmdgen.CommunityData('my-agent', 'public', 0),
+    ...:     cmdgen.UdpTransportTarget(('127.0.0.1', 161)),
+    ...:     '.1.3.6.1.2.1.1.1.0'  #OID标识符（百度搜索snmpwalk OID标识符）
+    ...:     )
+
+In [15]: print varBinds
+
+
+
+
+
+
+
