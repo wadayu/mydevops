@@ -1,2 +1,8 @@
 [test]
 192.168.19.130 ansible_ssh_user=wadayu ansible_ssh_pass=666666 ansible_sudo_pass=666666
+[dbservers]
+192.168.19.131 ansible_ssh_user=wadayu ansible_ssh_pass=666666 ansible_sudo_pass=666666
+[webservers]
+192.168.19.132 ansible_ssh_user=wadayu ansible_ssh_pass=666666 ansible_sudo_pass=666666
+[redisservers]
+192.168.19.133 ansible_ssh_user=wadayu ansible_ssh_pass=666666 ansible_sudo_pass=666666

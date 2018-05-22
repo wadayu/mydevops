@@ -12,4 +12,16 @@ from ansible.plugins.callback import CallbackBase
 #InvertoryManager类
 loader = DataLoader()
 inventory = InventoryManager(loader=loader,sources=['imoocc_hosts'])
+host = inventory.get_host('192.168.19.130')
+
+#VariableManager类
+variable_manager = VariableManager(loader=loader,inventory=inventory)
+variable_manager.get_vars() #获取所以的主机
+variable_manager.get_vars(host=host) #获取指定的主机
+
+variable_manager.set_host_variable(host,'ansible_ssh_user','wangdaoyun')
+var = variable_manager.get_vars(host=host)
+variable_manager.extra_vars={'myname':'zhidianlife'} 
+var1 = variable_manager.get_vars(host=host)
+print var1
 
