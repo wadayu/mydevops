@@ -1,0 +1,7 @@
+---
+- hosts: 192.168.19.132
+  remote_user: wadayu
+  tasks: 
+    - name: touch /tmp/play_book.test
+      file: name=/tmp/play_book.test state=touch owner=root group=root mode=644
+

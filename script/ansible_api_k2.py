@@ -1,10 +1,11 @@
 #coding:utf-8
 '''
-ad-hoc模式
+play-book模式
 '''
 __author__ = 'WangDy'
 __date__ = '2018/5/21 15:07'
 
+import json
 from collections import namedtuple
 from ansible.parsing.dataloader import DataLoader
 from ansible.vars.manager import VariableManager
@@ -12,6 +13,7 @@ from ansible.inventory.manager import InventoryManager
 from ansible.playbook.play import Play
 from ansible.executor.task_queue_manager import TaskQueueManager
 from ansible.plugins.callback import CallbackBase
+from ansible.executor.playbook_executor import PlaybookExecutor
 
 #InvertoryManager类
 loader = DataLoader()
@@ -68,55 +70,64 @@ options = Options(connection='smart',
                        listtags=None,
                        syntax=None,)
 
-#Play执行对象和模块
-play_source = dict(
-	name = 'Ansible Play ad-hoc test',
-	hosts = '192.168.19.130',
-	gather_facts = 'no',
-	tasks = [
-	    dict(action=dict(module='shell',args='touch /tmp/ad_hoc_test'))
-	    # dict(action=dict(module='debug', args=dict(msg='{{shell_out.stdout}}')))
-	]
-)
-play = Play().load(play_source,variable_manager=variable_manager,loader=loader)
-
-class ModelResultsCollector(CallbackBase):
+class PlayBookResultsCollector(CallbackBase):
     """
     重写callbackBase类的部分方法
     """
     def __init__(self, *args, **kwargs):
-        super(ModelResultsCollector, self).__init__(*args, **kwargs)
-        self.host_ok = {}
-        self.host_unreachable = {}
-        self.host_failed = {}
+        super(PlayBookResultsCollector, self).__init__(*args, **kwargs)
+        self.task_ok = {}
+        self.task_unreachable = {}
+        self.task_failed = {}
+        self.task_status = {}
+        self.task_skipped = {}
     def v2_runner_on_unreachable(self, result):
-        self.host_unreachable[result._host.get_name()] = result
-    def v2_runner_on_ok(self, result):
-        self.host_ok[result._host.get_name()] = result
-    def v2_runner_on_failed(self, result,ignore_errors=False):
-        self.host_failed[result._host.get_name()] = result
+        self.task_unreachable[result._host.get_name()] = result
+    def v2_runner_on_ok(self, result,*args,**kwargs):
+        self.task_ok[result._host.get_name()] = result
+    def v2_runner_on_failed(self, result,ignore_errors=False,*args,**kwargs):
+        self.task_failed[result._host.get_name()] = result
+    def v2_runner_on_skipped(self,result):
+	self.task_skipped[result._host.get_name()] = result
+    def v2_playbook_on_stats(self,stats):
+	hosts = sorted(stats.processed.keys())
+	for h in hosts:
+	    t = stats.summarize(h)
+	    self.task_status[h]={
+		'ok':t['ok'],
+		'changed':t['changed'],
+		'unreachable':t['unreachable'],
+		'skipped':t['skipped'],
+		'failed':t['failed']
+            }	
 
-callback =  ModelResultsCollector()
+callback =  PlayBookResultsCollector()
 
 passwords = dict()
-tqm = TaskQueueManager(
+playbook = PlaybookExecutor(
+	playbooks=['f1.yml'],
 	inventory = inventory,
 	variable_manager = variable_manager,
 	loader = loader,
 	options = options,
 	passwords = passwords,
-	stdout_callback = callback,	
 )
 
-tqm.run(play)
+playbook._tqm._stdout_callback = callback
+playbook.run()
 
 #print callback.host_ok.items()
-result_raw = {'success':{},'failed':{},'unreachable':{}}
-for host,result in callback.host_ok.items():
-    result_raw['success'][host] = result._result
-for host,result in callback.host_failed.items():
+result_raw = {'ok':{},'failed':{},'unreachable':{},'skipped':{},'status':{}}
+for host,result in callback.task_ok.items():
+    result_raw['ok'][host] = result._result
+for host,result in callback.task_failed.items():
     result_raw['failed'][host] = result._result
-for host,result in callback.host_unreachable.items():
+for host,result in callback.task_unreachable.items():
     result_raw['unreachable'][host] = result._result
+for host,result in callback.task_status.items():
+    result_raw['status'][host] = result._result
+for host,result in callback.task_skipped.items():
+    result_raw['skipped'][host] = result._result
 
-print result_raw
+print json.dumps(result_raw,indent=4)
+
